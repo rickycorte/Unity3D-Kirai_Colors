@@ -8,6 +8,7 @@ namespace Game
     {
 
         Button btn;
+        Image img;
 
         bool isRight = false;
 
@@ -15,13 +16,14 @@ namespace Game
         void Init()
         {
             btn = GetComponent<Button>();
+            img = GetComponent<Image>();
             btn.onClick.AddListener(delegate { OnClick(); });
         }
 
 
         public void SetProperties(bool correct, Color btnCol)
         {
-            btn.gameObject.GetComponent<Image>().color = btnCol;
+            img.color = btnCol;
             isRight = correct;
         }
 

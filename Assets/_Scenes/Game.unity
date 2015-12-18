@@ -141,6 +141,12 @@ MonoBehaviour:
   m_Spacing: 5
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
+--- !u!114 &57834298 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11417424, guid: 784d762f905255945918815d5871631f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1247539595}
+  m_Script: {fileID: 11500000, guid: eee60b6ada8f38a4fa51933b9da9a7eb, type: 3}
 --- !u!1001 &74031246
 Prefab:
   m_ObjectHideFlags: 0
@@ -182,19 +188,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50.166668
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.333332
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100.333336
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 76.666664
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.x
@@ -202,7 +208,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.x
@@ -210,7 +216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Pivot.x
@@ -222,7 +228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 187536, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Name
-      value: GameButton (2)
+      value: GameButton 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 784d762f905255945918815d5871631f, type: 2}
@@ -232,6 +238,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22454046, guid: 784d762f905255945918815d5871631f,
     type: 2}
   m_PrefabInternal: {fileID: 74031246}
+--- !u!114 &227453245 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11417424, guid: 784d762f905255945918815d5871631f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1387671171}
+  m_Script: {fileID: 11500000, guid: eee60b6ada8f38a4fa51933b9da9a7eb, type: 3}
 --- !u!224 &253790972 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22454046, guid: 784d762f905255945918815d5871631f,
@@ -407,19 +419,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 260.83334
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.333332
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100.333336
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 76.666664
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.x
@@ -427,7 +439,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.x
@@ -435,7 +447,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Pivot.x
@@ -447,7 +459,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 187536, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Name
-      value: GameButton (2)
+      value: GameButton 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 784d762f905255945918815d5871631f, type: 2}
@@ -457,6 +469,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22454046, guid: 784d762f905255945918815d5871631f,
     type: 2}
   m_PrefabInternal: {fileID: 511742021}
+--- !u!114 &632717107 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11417424, guid: 784d762f905255945918815d5871631f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1144418516}
+  m_Script: {fileID: 11500000, guid: eee60b6ada8f38a4fa51933b9da9a7eb, type: 3}
 --- !u!1001 &903836778
 Prefab:
   m_ObjectHideFlags: 0
@@ -498,19 +516,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 155.5
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.333332
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100.333336
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 76.666664
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.x
@@ -518,7 +536,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.x
@@ -526,7 +544,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Pivot.x
@@ -538,7 +556,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 187536, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Name
-      value: GameButton (1)
+      value: GameButton 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 784d762f905255945918815d5871631f, type: 2}
@@ -589,19 +607,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 260.83334
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.333332
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100.333336
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 76.666664
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.x
@@ -609,7 +627,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.x
@@ -617,7 +635,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Pivot.x
@@ -626,6 +644,10 @@ Prefab:
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 187536, guid: 784d762f905255945918815d5871631f, type: 2}
+      propertyPath: m_Name
+      value: Button 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 784d762f905255945918815d5871631f, type: 2}
@@ -700,6 +722,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  GameButtons:
+  - {fileID: 227453245}
+  - {fileID: 1162957517}
+  - {fileID: 2013758353}
+  - {fileID: 1196641959}
+  - {fileID: 57834298}
+  - {fileID: 1477470973}
+  - {fileID: 1890126885}
+  - {fileID: 1171795091}
+  - {fileID: 632717107}
 --- !u!1 &1092973782
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,19 +829,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50.166668
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.333332
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100.333336
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 76.666664
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.x
@@ -817,7 +849,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.x
@@ -825,7 +857,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Pivot.x
@@ -837,7 +869,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 187536, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Name
-      value: GameButton (2)
+      value: GameButton 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 784d762f905255945918815d5871631f, type: 2}
@@ -888,19 +920,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 260.83334
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.333332
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100.333336
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 76.666664
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.x
@@ -908,7 +940,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.x
@@ -916,7 +948,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Pivot.x
@@ -926,6 +958,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 187536, guid: 784d762f905255945918815d5871631f, type: 2}
+      propertyPath: m_Name
+      value: Button 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 784d762f905255945918815d5871631f, type: 2}
   m_IsPrefabParent: 0
@@ -934,6 +970,24 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22454046, guid: 784d762f905255945918815d5871631f,
     type: 2}
   m_PrefabInternal: {fileID: 1144418516}
+--- !u!114 &1162957517 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11417424, guid: 784d762f905255945918815d5871631f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1207191647}
+  m_Script: {fileID: 11500000, guid: eee60b6ada8f38a4fa51933b9da9a7eb, type: 3}
+--- !u!114 &1171795091 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11417424, guid: 784d762f905255945918815d5871631f,
+    type: 2}
+  m_PrefabInternal: {fileID: 903836778}
+  m_Script: {fileID: 11500000, guid: eee60b6ada8f38a4fa51933b9da9a7eb, type: 3}
+--- !u!114 &1196641959 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11417424, guid: 784d762f905255945918815d5871631f,
+    type: 2}
+  m_PrefabInternal: {fileID: 74031246}
+  m_Script: {fileID: 11500000, guid: eee60b6ada8f38a4fa51933b9da9a7eb, type: 3}
 --- !u!1001 &1207191647
 Prefab:
   m_ObjectHideFlags: 0
@@ -975,19 +1029,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 155.5
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.333332
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100.333336
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 76.666664
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.x
@@ -995,7 +1049,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.x
@@ -1003,7 +1057,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Pivot.x
@@ -1015,7 +1069,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 187536, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Name
-      value: GameButton (1)
+      value: GameButton 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 784d762f905255945918815d5871631f, type: 2}
@@ -1066,19 +1120,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 155.5
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.333332
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100.333336
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 76.666664
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.x
@@ -1086,7 +1140,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.x
@@ -1094,7 +1148,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Pivot.x
@@ -1106,7 +1160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 187536, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Name
-      value: GameButton (1)
+      value: GameButton 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 784d762f905255945918815d5871631f, type: 2}
@@ -1305,19 +1359,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50.166668
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.333332
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100.333336
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 76.666664
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.x
@@ -1325,7 +1379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.x
@@ -1333,7 +1387,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22454046, guid: 784d762f905255945918815d5871631f, type: 2}
       propertyPath: m_Pivot.x
@@ -1343,9 +1397,19 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 187536, guid: 784d762f905255945918815d5871631f, type: 2}
+      propertyPath: m_Name
+      value: Button 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 784d762f905255945918815d5871631f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1477470973 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11417424, guid: 784d762f905255945918815d5871631f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1025279532}
+  m_Script: {fileID: 11500000, guid: eee60b6ada8f38a4fa51933b9da9a7eb, type: 3}
 --- !u!1 &1593400717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1534,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1778250498}
+--- !u!114 &1890126885 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11417424, guid: 784d762f905255945918815d5871631f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1093364485}
+  m_Script: {fileID: 11500000, guid: eee60b6ada8f38a4fa51933b9da9a7eb, type: 3}
+--- !u!114 &2013758353 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11417424, guid: 784d762f905255945918815d5871631f,
+    type: 2}
+  m_PrefabInternal: {fileID: 511742021}
+  m_Script: {fileID: 11500000, guid: eee60b6ada8f38a4fa51933b9da9a7eb, type: 3}
 --- !u!1 &2041282424
 GameObject:
   m_ObjectHideFlags: 0
