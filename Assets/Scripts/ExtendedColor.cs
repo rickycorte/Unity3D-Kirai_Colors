@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//basic unity color that include also a name
 public class ExtendedColor
 {
     public Color color;
     public string name;
-
+ 
     public ExtendedColor(string Name, Color cl)
     {
         color = cl;

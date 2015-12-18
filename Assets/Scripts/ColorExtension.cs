@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//class that contains only a list of static colors to use
 public class ColorExtension : MonoBehaviour {
 
     public static ExtendedColor red = new ExtendedColor("Red", Color.red);

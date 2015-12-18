@@ -3,6 +3,7 @@ using System.Collections;
 
 namespace Game
 {
+    //references to important gameobjects.
     public class References : MonoBehaviour
     {
 
@@ -10,7 +11,7 @@ namespace Game
         public EventMaster ev;
 
         // Use this for initialization
-        void Start()
+        void OnEnable()
         {
             evMaster = ev;
         }
