@@ -12,7 +12,11 @@ public class GameManager : MonoBehaviour {
 
         if (isStarted)
         {
-
+            Debug.Log("ciao il mio colore preferito e': "+ColorExtension.red);
+            Debug.Log(ColorExtension.yellow+ " e' il miglior colore");
+            Debug.Log("ciao " + ColorExtension.blue + ", sei bello ");
+            Color c = ColorExtension.red;
+            Debug.Log(c.ToString());
         }
 
 	}

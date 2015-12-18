@@ -3,13 +3,19 @@ using System.Collections;
 
 public class ColorExtension : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public static ExtendedColor red = new ExtendedColor("Red", Color.red);
+
+    public static ExtendedColor blue = new ExtendedColor("Blue", Color.blue);
+
+    public static ExtendedColor black = new ExtendedColor("Black", Color.black);
+
+    public static ExtendedColor cyan = new ExtendedColor("Cyan", Color.cyan);
+
+    public static ExtendedColor gray = new ExtendedColor("Gray", Color.gray);
+
+    public static ExtendedColor green = new ExtendedColor("Green", Color.green);
+
+    public static ExtendedColor white = new ExtendedColor("White", Color.white);
+
+    public static ExtendedColor yellow = new ExtendedColor("Yellow", Color.yellow);
 }
