@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 
 namespace Game
@@ -9,6 +10,7 @@ namespace Game
         bool isStarted = true;
 
         [SerializeField] int score = 0;
+        [SerializeField] Text HeaderText;
         [SerializeField] List<GameButton> GameButtons;
         ExtendedColor[] colors = new ExtendedColor[]
             { ColorExtension.red,ColorExtension.blue,ColorExtension.cyan,ColorExtension.gray,ColorExtension.green,
@@ -20,20 +22,20 @@ namespace Game
 
             if (isStarted)
             {
-                SetUpButtonsColor(4, 1);
+                SetUpButtonsColor(Random.Range(0,GameButtons.Count), Random.Range(0,colors.Length));
             }
 
         }
 
 
-        void SetUpButtonsColor(int correct_index,int correct_color_index)
-        {            
+        void SetUpButtonsColor(int correct_index, int correct_color_index)
+        {
             for (int i = 0; i < GameButtons.Count; i++)
             {
                 if (i != correct_index)
                 {
                     int col_index;
-                    do{
+                    do {
                         col_index = Random.Range(0, colors.Length);
                     } while (col_index == correct_color_index);
 
@@ -43,12 +45,22 @@ namespace Game
                 }
                 else
                 {
-                    Debug.Log("Correct button is in pos: " + correct_index + "ans it's color is: " + colors[correct_color_index]);
+                    Debug.Log("Correct button is in pos: " + correct_index + " and it's color is: " + colors[correct_color_index]);
                     GameButtons[i].SetProperties(true, colors[correct_color_index]);
+                    SetHeaderText(colors[correct_color_index]);
                 }
             }
         }
 
 
+        void SetHeaderText(string BtnToClick)
+        {
+            HeaderText.text = "Tap the " + BtnToClick + " button!";
+        }
+
+        public void NewButtons()
+        {
+            SetUpButtonsColor(Random.Range(0, GameButtons.Count), Random.Range(0, colors.Length));
+        }
     }
 }
