@@ -33,6 +33,8 @@ namespace Game
                 ColorExtension.black,ColorExtension.white,ColorExtension.yellow
             }; // all color list
 
+        [SerializeField] GameOverMenu gmOverMenu;
+
         delegate void BaseAction(); 
 
         BaseAction UpdateAction;//function to rely with different timer uses
@@ -72,6 +74,7 @@ namespace Game
                     ev.OnRightButtonClick += TimeAttack_UpdateBarPos; // update the bar fill
                     ev.OnWrongButtonClick += TimeAttack_WrongClick; // sets the action for wrong click
                     bar.SetSliderMaxValue(TimeAttack_MaxScore);
+                    UpdateScoreText("Progress: " + score + "/" + TimeAttack_MaxScore);
                     break;
                 default:
                     Debug.LogError("No implementation for that GameMode");
@@ -124,34 +127,48 @@ namespace Game
         //refresh the buttons
         public void NewButtons()
         {
-            SetUpButtonsColor(Random.Range(0, GameButtons.Count), Random.Range(0, colors.Length));
+            if (isStarted)
+            {
+                SetUpButtonsColor(Random.Range(0, GameButtons.Count), Random.Range(0, colors.Length));
+            }
         }
+
 
         public void addScore()
         {
             //TODO:calcolare punteggio in base a tempo       
             ScoreAdded.text = "+" + PointsToAdd;
             score += PointsToAdd;
-            ScoreText.text = "Score: " + score;
+
         }
 
+        //update score text 
+        void UpdateScoreText(string text)
+        {
+            ScoreText.text = text;
+        }
 
+        //function to call in update delegate
         void TimeAttack_TimerAction()
         {
             timer += Time.deltaTime;
             TimeAttack_UpdateBarTimer();
         }
 
+        //function to call when click on wrong button
         void TimeAttack_WrongClick()
         {
             timer += 10f;
         }
 
+        //update barr fill and also scoretext
         void TimeAttack_UpdateBarPos()
         {
             bar.SetSliderPos(score);
+            UpdateScoreText("Progress: " + score + "/" + TimeAttack_MaxScore);
+            TimeAttack_CheckForEndGame();
         }
-
+        //update timer inside bar with a readable time expr
         void TimeAttack_UpdateBarTimer()
         {
             System.TimeSpan time = System.TimeSpan.FromSeconds(timer);
@@ -159,10 +176,35 @@ namespace Game
             bar.UpdateText(timeString);
         }
 
+        //prevent manager to execute button refresh or update actions
+        void StopGame()
+        {
+            isStarted = false;
+        }
+
+        
+        void TimeAttack_CheckForEndGame()
+        {
+            if (score >= TimeAttack_MaxScore)
+            {
+                TimeAttack_EndGame();
+            }
+
+        }
+
+
+        void TimeAttack_EndGame()
+        {
+            StopGame();
+            gmOverMenu.gameObject.SetActive(true);
+            gmOverMenu.SetInfo(GameMode, timer);
+        }
+
+
 
         void Update()
         {
-            if(UpdateAction != null)
+            if(UpdateAction != null && isStarted)
             UpdateAction();
         }
 
