@@ -12,9 +12,19 @@ public class AutoQualitySettings : MonoBehaviour {
 
     float q_timer = 0f;
 
-    bool drawfps = true;
+    [SerializeField] bool drawfps = true;
+    string version = "Alpha 0.2";
+
 
     GUIStyle style = new GUIStyle();
+
+    GUIStyle WarningStyle = new GUIStyle();
+
+    void Start()
+    {
+        WarningStyle.fontSize = 16;
+        WarningStyle.normal.textColor = Color.yellow;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -41,9 +51,9 @@ public class AutoQualitySettings : MonoBehaviour {
         if (drawfps)
         {
             if (fps < 999)
-                GUI.Label(new Rect(10, 50, 100, 20), "FPS: " + fps + " - Quality: " + QualitySettings.GetQualityLevel(), style);
+                GUI.Label(new Rect(10, 50, 100, 20), "FPS: " + fps + " - Quality: " + QualitySettings.GetQualityLevel()+"\n"+version, style);
             else
-                GUI.Label(new Rect(10, 50, 100, 20), "FPS: 999+ - Quality: " + QualitySettings.GetQualityLevel(), style);
+                GUI.Label(new Rect(10, 50, 100, 20), "FPS: 999+ - Quality: " + QualitySettings.GetQualityLevel() + "\n" + version, style);
         }
 
     }

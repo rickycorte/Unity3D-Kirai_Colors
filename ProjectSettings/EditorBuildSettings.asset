@@ -6,4 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Scenes/MainMenu.unity
+  - enabled: 1
     path: Assets/_Scenes/Game.unity
+  - enabled: 1
+    path: Assets/_Scenes/colorListTest.unity

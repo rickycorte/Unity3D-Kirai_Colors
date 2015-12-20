@@ -28,11 +28,6 @@ namespace Game
 
         [SerializeField] CustomSlider bar;
 
-        ExtendedColor[] colors = new ExtendedColor[]
-            { ColorExtension.red,ColorExtension.blue,ColorExtension.cyan,ColorExtension.gray,ColorExtension.green,
-                ColorExtension.black,ColorExtension.white,ColorExtension.yellow
-            }; // all color list
-
         [SerializeField] GameOverMenu gmOverMenu;
 
         delegate void BaseAction(); 
@@ -43,6 +38,7 @@ namespace Game
 
         void OnEnable()
         {
+
             ev = References.evMaster;
             ev.OnRightButtonClick += NewButtons; //TODO: versione temporanea 
             ev.OnRightButtonClick += addScore;
@@ -64,6 +60,7 @@ namespace Game
             }
         }
 
+
         void Init()
         {
             switch (GameMode)
@@ -80,6 +77,10 @@ namespace Game
                     Debug.LogError("No implementation for that GameMode");
                     break;
             }
+
+            //GetAllColors();
+
+
         }
 
         // Use this for initialization
@@ -88,10 +89,24 @@ namespace Game
             Init();
             if (isStarted)
             {
-                SetUpButtonsColor(Random.Range(0,GameButtons.Count), Random.Range(0,colors.Length));
+                NewButtons();
             }
 
         }
+
+
+
+        //use reflection to get all colors in ColorExtension Class
+        //void GetAllColors()
+        //{
+        //    foreach (var prop in typeof(ColorExtension).GetFields())
+        //    {
+        //        ExtendedColor col = (ExtendedColor)prop.GetValue(null);
+        //        //Debug.Log(col.name);
+        //        colors.Add(col);
+        //    }
+        //    Debug.Log("Found " + colors.Count + " colors");
+        //}
 
         //set color of all buttons and correct one 
         void SetUpButtonsColor(int correct_index, int correct_color_index)
@@ -102,18 +117,18 @@ namespace Game
                 {
                     int col_index;
                     do {
-                        col_index = Random.Range(0, colors.Length);
+                        col_index = Random.Range(0, ColorExtension.colors.Length);
                     } while (col_index == correct_color_index);
 
-                    Debug.Log("Setting color: " + colors[col_index] + " to button: " + i);
-                    GameButtons[i].SetProperties(false, colors[col_index]);
+                    Debug.Log("Setting color: " + ColorExtension.colors[col_index] + " to button: " + i);
+                    GameButtons[i].SetProperties(false, ColorExtension.colors[col_index]);
 
                 }
                 else
                 {
-                    Debug.Log("Correct button is in pos: " + correct_index + " and it's color is: " + colors[correct_color_index]);
-                    GameButtons[i].SetProperties(true, colors[correct_color_index]);
-                    SetHeaderText(colors[correct_color_index]);
+                    Debug.Log("Correct button is in pos: " + correct_index + " and it's color is: " + ColorExtension.colors[correct_color_index]);
+                    GameButtons[i].SetProperties(true, ColorExtension.colors[correct_color_index]);
+                    SetHeaderText(ColorExtension.colors[correct_color_index]);
                 }
             }
         }
@@ -129,7 +144,7 @@ namespace Game
         {
             if (isStarted)
             {
-                SetUpButtonsColor(Random.Range(0, GameButtons.Count), Random.Range(0, colors.Length));
+                SetUpButtonsColor(Random.Range(0, GameButtons.Count), Random.Range(0, ColorExtension.colors.Length));
             }
         }
 
