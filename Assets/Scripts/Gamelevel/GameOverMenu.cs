@@ -15,18 +15,30 @@ namespace Game
         {
             switch (gameMode)
             {
-                case GameManager.GameModes.Time_Attack:
-                    HeaderText.text = "Time Attack";
-                    ScoreHeaderText.text = "Your time: ";
-                    System.TimeSpan time = System.TimeSpan.FromSeconds(score); // used to print a readable time expression
-                    string timestring = string.Format("{0:D}:{1:D2}:{2:D1}", time.Minutes, time.Seconds, Mathf.RoundToInt(time.Milliseconds / 100f));
-                    ScoreText.text = timestring;
+                case GameManager.GameModes.TimeAttack_Short:
+                    TimeAttack_InfoPeset(score);
+                    break;
+                case GameManager.GameModes.TimeAttack:
+                    TimeAttack_InfoPeset(score);
+                    break;
+                case GameManager.GameModes.TimeAttack_Long:
+                    TimeAttack_InfoPeset(score);
                     break;
                 default:
                     Debug.LogError("Ni implementation found");
                     break;
             }
         }
+
+        void TimeAttack_InfoPeset(float score)
+        {
+            HeaderText.text = "Time Attack";
+            ScoreHeaderText.text = "Your time: ";
+            System.TimeSpan time = System.TimeSpan.FromSeconds(score); // used to print a readable time expression
+            string timestring = string.Format("{0:D}:{1:D2}:{2:D1}", time.Minutes, time.Seconds, Mathf.RoundToInt(time.Milliseconds / 100f));
+            ScoreText.text = timestring;
+        }
+
 
         //TODO: generare link per lo share
 

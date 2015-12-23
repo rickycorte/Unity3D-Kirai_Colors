@@ -14,6 +14,18 @@ public class ButtonUtilities : MonoBehaviour {
         SceneManager.LoadScene(index);
     }
 
+    public void LoadGameLevel()
+    {
+        LoadLevel("Game");
+    }
+
+    //save into playerprefs the selected mode
+    public void SetGameMode(int gm)
+    {
+        PlayerPrefs.SetInt("GameMode", gm);
+    }
+
+
     public void Quit()
     {
         Application.Quit();

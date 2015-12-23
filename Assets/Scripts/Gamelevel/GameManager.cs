@@ -7,7 +7,7 @@ namespace Game
 {
     public class GameManager : MonoBehaviour {
 
-        public enum GameModes {Time_Attack, Rush }
+        public enum GameModes {TimeAttack_Short,TimeAttack,TimeAttack_Long, Rush, Rush_Crazy, Rush_Insane }
 
         public GameModes GameMode;
 
@@ -15,7 +15,7 @@ namespace Game
 
 
         [SerializeField] int score = 0;
-        const int TimeAttack_MaxScore = 25;
+        int TimeAttack_MaxScore = 25;
         int PointsToAdd = 0;
 
         [SerializeField] float timer = 0f;
@@ -52,35 +52,66 @@ namespace Game
             //ev.OnWrongButtonClick -= TimeAttack_WrongClick;
             switch (GameMode)
             {
-                case GameModes.Time_Attack:
-                    UpdateAction -= TimeAttack_TimerAction; // adds timer function  to update delegate
-                    ev.OnRightButtonClick -= TimeAttack_UpdateBarPos; // update the bar fill
-                    ev.OnWrongButtonClick -= TimeAttack_WrongClick; // sets the action for wrong click
-                    break;            
+                case GameModes.TimeAttack_Short:
+                    Rm_TimeAttack();
+                    break;
+                case GameModes.TimeAttack:
+                    Rm_TimeAttack();
+                    break;
+                case GameModes.TimeAttack_Long:
+                    Rm_TimeAttack();
+                    break;        
             }
         }
 
 
+        void Rm_TimeAttack()
+        {
+            UpdateAction -= TimeAttack_TimerAction; // adds timer function  to update delegate
+            ev.OnRightButtonClick -= TimeAttack_UpdateBarPos; // update the bar fill
+            ev.OnWrongButtonClick -= TimeAttack_WrongClick; // sets the action for wrong click
+        }
+
         void Init()
         {
+            GameMode = (GameModes)GetGamemodeFromDrive();
             switch (GameMode)
             {
-                case GameModes.Time_Attack:
-                    PointsToAdd = 1;
-                    UpdateAction += TimeAttack_TimerAction; // adds timer function  to update delegate
-                    ev.OnRightButtonClick += TimeAttack_UpdateBarPos; // update the bar fill
-                    ev.OnWrongButtonClick += TimeAttack_WrongClick; // sets the action for wrong click
-                    bar.SetSliderMaxValue(TimeAttack_MaxScore);
-                    UpdateScoreText("Progress: " + score + "/" + TimeAttack_MaxScore);
+                case GameModes.TimeAttack_Short:
+                    TimeAttack_MaxScore = 25;
+                    SetUp_TimeAttack();
+                    break;
+                case GameModes.TimeAttack:
+                    TimeAttack_MaxScore = 50;
+                    SetUp_TimeAttack();
+                    break;
+                case GameModes.TimeAttack_Long:
+                    TimeAttack_MaxScore = 100;
+                    SetUp_TimeAttack();
                     break;
                 default:
                     Debug.LogError("No implementation for that GameMode");
                     break;
             }
+        }
 
-            //GetAllColors();
 
+        int GetGamemodeFromDrive()
+        {
+            if (PlayerPrefs.HasKey("GameMode"))
+                return PlayerPrefs.GetInt("GameMode");
+            Debug.LogError("No Gamemode set!");
+            return 0; // default gamemode
+        }
 
+        void SetUp_TimeAttack()
+        {
+            PointsToAdd = 1;
+            UpdateAction += TimeAttack_TimerAction; // adds timer function  to update delegate
+            ev.OnRightButtonClick += TimeAttack_UpdateBarPos; // update the bar fill
+            ev.OnWrongButtonClick += TimeAttack_WrongClick; // sets the action for wrong click
+            bar.SetSliderMaxValue(TimeAttack_MaxScore);
+            UpdateScoreText("Progress: " + score + "/" + TimeAttack_MaxScore);
         }
 
         // Use this for initialization
@@ -93,20 +124,6 @@ namespace Game
             }
 
         }
-
-
-
-        //use reflection to get all colors in ColorExtension Class
-        //void GetAllColors()
-        //{
-        //    foreach (var prop in typeof(ColorExtension).GetFields())
-        //    {
-        //        ExtendedColor col = (ExtendedColor)prop.GetValue(null);
-        //        //Debug.Log(col.name);
-        //        colors.Add(col);
-        //    }
-        //    Debug.Log("Found " + colors.Count + " colors");
-        //}
 
         //set color of all buttons and correct one 
         void SetUpButtonsColor(int correct_index, int correct_color_index)
