@@ -20,9 +20,9 @@ public class ColorExtension : MonoBehaviour {
 
     public static ExtendedColor yellow = new ExtendedColor("Yellow", Color.yellow);
 
-    public static ExtendedColor pink = new ExtendedColor("Pink", 255f,212f,229f);
+    public static ExtendedColor pink = new ExtendedColor("Pink", 0xff,0xc0,0xcb);
 
-    public static ExtendedColor orange = new ExtendedColor("Orange", 255f, 183f, 69f);
+    public static ExtendedColor orange = new ExtendedColor("Orange", 0xff, 0xa5, 0x00);
 
     public static ExtendedColor brown = new ExtendedColor("Brown", 0x96,0x4b,0x00);
 
@@ -40,7 +40,7 @@ public class ColorExtension : MonoBehaviour {
 
     public static ExtendedColor indianred = new ExtendedColor("Indian Red", 0xcd, 0x55, 0x55);
 
-    public static ExtendedColor ivory = new ExtendedColor("Ivory", 0xee, 0xee, 0xe0);
+    public static ExtendedColor fucsia = new ExtendedColor("Fucsia", 0xfb, 0x00, 0xfb);
 
     public static ExtendedColor violetred = new ExtendedColor("Violet Red", 0xc7, 0x15, 0x85);
 
@@ -64,15 +64,15 @@ public class ColorExtension : MonoBehaviour {
 
     //public static ExtendedColor heliotrope = new ExtendedColor("Heliotrope", 0xdf, 0x73, 0xff);
 
-    public static ExtendedColor fhippieblue = new ExtendedColor("Hippie Blue", 0x58, 0x9a, 0xaf);
+    //public static ExtendedColor fhippieblue = new ExtendedColor("Hippie Blue", 0x58, 0x9a, 0xaf);
 
-    public static ExtendedColor hitpink = new ExtendedColor("Hit Pink", 0xff, 0xab, 0x81);
+    //public static ExtendedColor hitpink = new ExtendedColor("Hit Pink", 0xff, 0xab, 0x81);
 
-    public static ExtendedColor iron = new ExtendedColor("Iron", 0xd4, 0xd7, 0xd9);
+    //public static ExtendedColor iron = new ExtendedColor("Iron", 0xd4, 0xd7, 0xd9);
 
     //public static ExtendedColor kimberly= new ExtendedColor("Kimberly", 0x73, 0x6c, 0x9f);
 
-    //public static ExtendedColor limedoak = new ExtendedColor("Limed Oak", 0xac, 0x8a, 0x56);
+    public static ExtendedColor limedoak = new ExtendedColor("Limed Oak", 0xac, 0x8a, 0x56);
 
     //public static ExtendedColor lola = new ExtendedColor("Lola", 0xdf, 0xcf, 0xdb);
 
@@ -82,15 +82,15 @@ public class ColorExtension : MonoBehaviour {
 
     //public static ExtendedColor mimosa = new ExtendedColor("Mimosa", 0xf8, 0xfd, 0xd3);
 
-    public static ExtendedColor fountainblue = new ExtendedColor("Fountain Blue", 0x56, 0xb4, 0xbe);
+    //public static ExtendedColor fountainblue = new ExtendedColor("Fountain Blue", 0x56, 0xb4, 0xbe);
 
-    public static ExtendedColor mintjulep = new ExtendedColor("Mint Julep", 0xf1, 0xee, 0xc1);
+    //public static ExtendedColor mintjulep = new ExtendedColor("Mint Julep", 0xf1, 0xee, 0xc1);
 
     //public static ExtendedColor mistgray = new ExtendedColor("Mist Gray", 0xc4, 0xc4, 0xbc);
 
    // public static ExtendedColor mojo = new ExtendedColor("Mojo", 0xc0, 0x47, 0x37);
 
-    public static ExtendedColor mossgreen = new ExtendedColor("Moss Green", 0xad, 0xdf, 0xad);
+    //public static ExtendedColor mossgreen = new ExtendedColor("Moss Green", 0xad, 0xdf, 0xad);
 
     public static ExtendedColor navyblue = new ExtendedColor("Navy Blue", 0x00, 0x00, 0x80);
 
@@ -100,15 +100,15 @@ public class ColorExtension : MonoBehaviour {
 
     //public static ExtendedColor oxley = new ExtendedColor("Oxley", 0x77, 0x9e, 0x86);
 
-    public static ExtendedColor palerose = new ExtendedColor("Pale Rose", 0xff, 0xe1, 0xf2);
+    public static ExtendedColor aquagreen = new ExtendedColor("Aqua Green", 0x23, 0xab, 0x9a);
 
     public static ExtendedColor paprika = new ExtendedColor("Paprika", 0x8d, 0x02, 0x26);
 
 
     public static ExtendedColor[] colors = new ExtendedColor[] {
-        red,blue,black,cyan,gray,green,white,yellow,pink,orange,brown,/*lightbrown,*/amber,olive,darkorange,salmon,deepskyblue,indianred,ivory,
-          violetred,palegreen,bordeaux,canary,/*casper,*/chocolate,emerald,/*geraldine,goldenglow,*/gulfblue,/*heliotrope,*/fhippieblue,hitpink,iron,
-         /* kimberly,limedoak,lola,*/malibu,melanzane,/*mimosa,*/fountainblue,mintjulep,/*mistgray,mojo,*/mossgreen,navyblue,ochre,/*onahau,oxley,*/palerose,paprika
+        red,blue,black,cyan,gray,green,white,yellow,pink,orange,brown,/*lightbrown,*/amber,olive,darkorange,salmon,deepskyblue,indianred,fucsia,
+          violetred,palegreen,bordeaux,canary,/*casper,*/chocolate,emerald,/*geraldine,goldenglow,*/gulfblue,/*heliotrope,fhippieblue,hitpink,iron,
+          kimberly,*/limedoak,/*lola,*/malibu,melanzane,/*mimosa/fountainblue,mintjulep,mistgray,mojo,mossgreen,*/navyblue,ochre,/*onahau,oxley,*/aquagreen,paprika
     };
 
 }
