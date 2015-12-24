@@ -494,7 +494,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -321}
+  m_AnchoredPosition: {x: 0, y: -334}
   m_SizeDelta: {x: 0, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &292577449
@@ -531,7 +531,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "The is a development build of the game and does not represent the final
     quality of the product.\nThis is a private/confidential build, you are not\r allowed
-    to take screenshots or make videos.\n\xA9 2015 RickyIT"
+    to take/share screenshots or make/share videos.\n\xA9 2015 RickyIT"
 --- !u!222 &292577450
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -892,11 +892,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11409764, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_Colors.m_NormalColor.r
-      value: 0.37525335
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11409764, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_Colors.m_NormalColor.g
-      value: 0.35294116
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11409764, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_Colors.m_NormalColor.b
@@ -918,6 +918,18 @@ Prefab:
     - target: {fileID: 22496708, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_SizeDelta.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432448, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
+      propertyPath: m_Color.r
+      value: 0.37254903
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432448, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
+      propertyPath: m_Color.g
+      value: 0.34901962
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432448, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
@@ -1417,7 +1429,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11d9b27a4c49e624aa39c4b0a5e7621d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameMode: 0
+  isTestMode: 0
+  GameMode: 5
   score: 0
   timer: 0
   HeaderText: {fileID: 385400159}

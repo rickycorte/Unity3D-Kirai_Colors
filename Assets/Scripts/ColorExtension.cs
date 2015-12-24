@@ -40,7 +40,7 @@ public class ColorExtension : MonoBehaviour {
 
     public static ExtendedColor indianred = new ExtendedColor("Indian Red", 0xcd, 0x55, 0x55);
 
-    public static ExtendedColor fucsia = new ExtendedColor("Fucsia", 0xfb, 0x00, 0xfb);
+    public static ExtendedColor fuchsia = new ExtendedColor("Fuchsia", 0xfb, 0x00, 0xfb);
 
     public static ExtendedColor violetred = new ExtendedColor("Violet Red", 0xc7, 0x15, 0x85);
 
@@ -106,7 +106,7 @@ public class ColorExtension : MonoBehaviour {
 
 
     public static ExtendedColor[] colors = new ExtendedColor[] {
-        red,blue,black,cyan,gray,green,white,yellow,pink,orange,brown,/*lightbrown,*/amber,olive,darkorange,salmon,deepskyblue,indianred,fucsia,
+        red,blue,black,cyan,gray,green,white,yellow,pink,orange,brown,/*lightbrown,*/amber,olive,darkorange,salmon,deepskyblue,indianred,fuchsia,
           violetred,palegreen,bordeaux,canary,/*casper,*/chocolate,emerald,/*geraldine,goldenglow,*/gulfblue,/*heliotrope,fhippieblue,hitpink,iron,
           kimberly,*/limedoak,/*lola,*/malibu,melanzane,/*mimosa/fountainblue,mintjulep,mistgray,mojo,mossgreen,*/navyblue,ochre,/*onahau,oxley,*/aquagreen,paprika
     };

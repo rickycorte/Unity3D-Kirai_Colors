@@ -7,6 +7,8 @@ namespace Game
 {
     public class GameManager : MonoBehaviour {
 
+        public bool isTestMode = false;
+
         public enum GameModes {TimeAttack_Short,TimeAttack,TimeAttack_Long, Rush, Rush_Crazy, Rush_Insane }
 
         public GameModes GameMode;
@@ -19,6 +21,8 @@ namespace Game
         int PointsToAdd = 0;
 
         [SerializeField] float timer = 0f;
+
+        int Rush_MaxTimer = 5;
 
         [SerializeField] Text HeaderText; // text displayed on top 
         [SerializeField] Text ScoreText;
@@ -41,14 +45,14 @@ namespace Game
 
             ev = References.evMaster;
             ev.OnRightButtonClick += NewButtons; //TODO: versione temporanea 
-            ev.OnRightButtonClick += addScore;
+            //ev.OnRightButtonClick += addScore;
             
         }
 
         void OnDisable()
         {
             ev.OnRightButtonClick -= NewButtons;
-            ev.OnRightButtonClick -= addScore;
+            //ev.OnRightButtonClick -= addScore;
             //ev.OnWrongButtonClick -= TimeAttack_WrongClick;
             switch (GameMode)
             {
@@ -60,21 +64,20 @@ namespace Game
                     break;
                 case GameModes.TimeAttack_Long:
                     Rm_TimeAttack();
-                    break;        
+                    break;
+                case GameModes.Rush:
+                    Rm_Rush();
+                    break;     
             }
         }
 
 
-        void Rm_TimeAttack()
-        {
-            UpdateAction -= TimeAttack_TimerAction; // adds timer function  to update delegate
-            ev.OnRightButtonClick -= TimeAttack_UpdateBarPos; // update the bar fill
-            ev.OnWrongButtonClick -= TimeAttack_WrongClick; // sets the action for wrong click
-        }
-
         void Init()
         {
-            GameMode = (GameModes)GetGamemodeFromDrive();
+            if (!isTestMode)
+            {
+                GameMode = (GameModes)GetGamemodeFromDrive();
+            }
             switch (GameMode)
             {
                 case GameModes.TimeAttack_Short:
@@ -88,6 +91,21 @@ namespace Game
                 case GameModes.TimeAttack_Long:
                     TimeAttack_MaxScore = 100;
                     SetUp_TimeAttack();
+                    break;
+                case GameModes.Rush:
+                    Rush_MaxTimer = 10;
+                    PointsToAdd = 5;
+                    SetUp_Rush();
+                    break;
+                case GameModes.Rush_Crazy:
+                    Rush_MaxTimer = 6;
+                    PointsToAdd = 10;
+                    SetUp_Rush();
+                    break;
+                case GameModes.Rush_Insane:
+                    Rush_MaxTimer = 3;
+                    PointsToAdd = 20;
+                    SetUp_Rush();
                     break;
                 default:
                     Debug.LogError("No implementation for that GameMode");
@@ -104,14 +122,41 @@ namespace Game
             return 0; // default gamemode
         }
 
+        //set events and vars for time attack modes
         void SetUp_TimeAttack()
         {
             PointsToAdd = 1;
             UpdateAction += TimeAttack_TimerAction; // adds timer function  to update delegate
+            ev.OnRightButtonClick += TimeAttack_addScore; // adds score before updating bar
             ev.OnRightButtonClick += TimeAttack_UpdateBarPos; // update the bar fill
             ev.OnWrongButtonClick += TimeAttack_WrongClick; // sets the action for wrong click
             bar.SetSliderMaxValue(TimeAttack_MaxScore);
             UpdateScoreText("Progress: " + score + "/" + TimeAttack_MaxScore);
+        }
+
+        void Rm_TimeAttack()
+        {
+            UpdateAction -= TimeAttack_TimerAction;
+            ev.OnRightButtonClick -= TimeAttack_UpdateBarPos;
+            ev.OnWrongButtonClick -= TimeAttack_WrongClick;
+            ev.OnRightButtonClick -= TimeAttack_addScore;
+        }
+
+        //setup Rush Gamemodes
+        void SetUp_Rush()
+        {
+            timer = Rush_MaxTimer;
+            bar.InvereAndSet(Rush_MaxTimer);
+            UpdateAction += Rush_UpdateAction;
+            ev.OnRightButtonClick += Rush_RightClick;
+            ev.OnWrongButtonClick += Rush_WrongClick;
+        }
+
+        void Rm_Rush()
+        {
+            UpdateAction -= Rush_UpdateAction;
+            ev.OnRightButtonClick -= Rush_RightClick;
+            ev.OnWrongButtonClick -= Rush_WrongClick;
         }
 
         // Use this for initialization
@@ -165,8 +210,15 @@ namespace Game
             }
         }
 
+        //prevent manager to execute button refresh or update actions
+        void StopGame()
+        {
+            isStarted = false;
+        }
 
-        public void addScore()
+
+
+        public void TimeAttack_addScore()
         {
             //TODO:calcolare punteggio in base a tempo       
             ScoreAdded.text = "+" + PointsToAdd;
@@ -208,12 +260,6 @@ namespace Game
             bar.UpdateText(timeString);
         }
 
-        //prevent manager to execute button refresh or update actions
-        void StopGame()
-        {
-            isStarted = false;
-        }
-
         
         void TimeAttack_CheckForEndGame()
         {
@@ -229,10 +275,74 @@ namespace Game
         {
             StopGame();
             gmOverMenu.gameObject.SetActive(true);
-            gmOverMenu.SetInfo(GameMode, timer);
+            //gmOverMenu.SetInfo(GameMode, timer);
+            gmOverMenu.TimeAttack_InfoPeset(timer);
         }
 
 
+
+        void Rush_UpdateAction()
+        {
+            timer -= Time.deltaTime;
+            TimeAttack_UpdateBarTimer();
+            Rush_UpdateBar();
+            if (timer <= 0)
+            {
+                Rush_EndGame("TimeOut");
+            }
+        }
+
+        void Rush_WrongClick()
+        {
+            Rush_EndGame("Wrong Color");
+        }
+
+        void Rush_EndGame(string motivation)
+        {
+            StopGame();
+            gmOverMenu.gameObject.SetActive(true);
+            gmOverMenu.Rush_InfoPreset(score, motivation);
+        }
+
+        void Rush_RightClick()
+        {
+            Rush_AddScore();
+            timer = Rush_MaxTimer;
+            Rush_UpdateScoreText();
+        }
+
+        void Rush_UpdateScoreText()
+        {
+            UpdateScoreText("Score: " + score);
+        }
+
+        void Rush_UpdateBar()
+        {
+            bar.SetSliderPos(timer);
+        }
+
+        void Rush_AddScore()
+        {
+            int scoreToAdd = Mathf.RoundToInt(CalculateScoreToAdd(timer, PointsToAdd, Rush_MaxTimer));
+            Debug.Log("Score to add: " + CalculateScoreToAdd(timer, PointsToAdd, Rush_MaxTimer));
+            ScoreAdded.text = "+" + scoreToAdd;
+            score += scoreToAdd;
+            //Rush_UpdateScoreText();
+        }
+
+
+        float CalculateScoreToAdd(float tm,float ptMax,float tmMax) // riferimento alle foto allegates
+        {
+            tm = tmMax - tm; // correzione tempo decrescente
+           // Debug.Log("Enter with: " + tm + " " + ptMax + " " + tmMax);
+            float res = (ptMax - 1) / (tmMax * tmMax) * (tm * tm); // ax^2
+            //Debug.Log(res.ToString());
+            res -= 2 * ((ptMax - 1) / tmMax) * tm;
+            //Debug.Log(res.ToString());
+            res += ptMax;
+            //Debug.Log(res.ToString());
+            return res;
+        }
 
         void Update()
         {

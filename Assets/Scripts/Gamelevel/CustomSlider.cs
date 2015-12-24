@@ -36,7 +36,7 @@ namespace Game
         public void Inverse()
         {
             slider.value = slider.maxValue;
-            slider.direction = Slider.Direction.RightToLeft;
+            //slider.direction = Slider.Direction.RightToLeft;
         }
 
         public void InvereAndSet(float maxVal)
