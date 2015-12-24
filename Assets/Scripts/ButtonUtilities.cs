@@ -2,7 +2,10 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class ButtonUtilities : MonoBehaviour {
+public class ButtonUtilities : MonoBehaviour
+{
+
+    [SerializeField] PopUpMenu popUp;
 
     public void LoadLevel(string level)
     {
@@ -30,4 +33,22 @@ public class ButtonUtilities : MonoBehaviour {
     {
         Application.Quit();
     }
+
+    public void LoadMainMenu()
+    {
+        LoadLevel("MainMenu");
+    }
+
+    public void PopUpQuit()
+    {
+        popUp.gameObject.SetActive(true);
+        popUp.SetInfo("Do you want to exit from the game?", Quit);
+    }
+
+    public void PopUpLoadMainMenu()
+    {
+        popUp.gameObject.SetActive(true);
+        popUp.SetInfo("Are you sure that to go back to Main Menu?", LoadMainMenu);
+    }
+
 }

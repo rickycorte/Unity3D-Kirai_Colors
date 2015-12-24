@@ -34,6 +34,8 @@ namespace Game
 
         [SerializeField] GameOverMenu gmOverMenu;
 
+        [SerializeField] GameObject GameView;
+
         delegate void BaseAction(); 
 
         BaseAction UpdateAction;//function to rely with different timer uses
@@ -44,16 +46,12 @@ namespace Game
         {
 
             ev = References.evMaster;
-            ev.OnRightButtonClick += NewButtons; //TODO: versione temporanea 
-            //ev.OnRightButtonClick += addScore;
-            
+            ev.OnRightButtonClick += NewButtons; //TODO: versione temporanea       
         }
 
         void OnDisable()
         {
             ev.OnRightButtonClick -= NewButtons;
-            //ev.OnRightButtonClick -= addScore;
-            //ev.OnWrongButtonClick -= TimeAttack_WrongClick;
             switch (GameMode)
             {
                 case GameModes.TimeAttack_Short:
@@ -67,7 +65,14 @@ namespace Game
                     break;
                 case GameModes.Rush:
                     Rm_Rush();
-                    break;     
+                    break;
+                case GameModes.Rush_Crazy:
+                    Rm_Rush();
+                    break;
+
+                case GameModes.Rush_Insane:
+                    Rm_Rush();
+                    break;
             }
         }
 
@@ -184,7 +189,6 @@ namespace Game
 
                     Debug.Log("Setting color: " + ColorExtension.colors[col_index] + " to button: " + i);
                     GameButtons[i].SetProperties(false, ColorExtension.colors[col_index]);
-
                 }
                 else
                 {
@@ -214,6 +218,8 @@ namespace Game
         void StopGame()
         {
             isStarted = false;
+            GameView.SetActive(false);
+
         }
 
 
@@ -260,7 +266,7 @@ namespace Game
             bar.UpdateText(timeString);
         }
 
-        
+        //Check for the end of time attack
         void TimeAttack_CheckForEndGame()
         {
             if (score >= TimeAttack_MaxScore)
@@ -270,17 +276,17 @@ namespace Game
 
         }
 
-
+        //end the game
         void TimeAttack_EndGame()
         {
-            StopGame();
             gmOverMenu.gameObject.SetActive(true);
             //gmOverMenu.SetInfo(GameMode, timer);
             gmOverMenu.TimeAttack_InfoPeset(timer);
+            StopGame();
         }
 
 
-
+        //action for UpdateS
         void Rush_UpdateAction()
         {
             timer -= Time.deltaTime;
@@ -292,18 +298,21 @@ namespace Game
             }
         }
 
+        //called when wrong button is clicked
         void Rush_WrongClick()
         {
             Rush_EndGame("Wrong Color");
         }
 
+        //end rush gamemode game 
         void Rush_EndGame(string motivation)
         {
-            StopGame();
             gmOverMenu.gameObject.SetActive(true);
             gmOverMenu.Rush_InfoPreset(score, motivation);
+            StopGame();
         }
 
+        //correct click action for rush gm
         void Rush_RightClick()
         {
             Rush_AddScore();
@@ -311,16 +320,19 @@ namespace Game
             Rush_UpdateScoreText();
         }
 
+        //update the Score: text
         void Rush_UpdateScoreText()
         {
             UpdateScoreText("Score: " + score);
         }
 
+        //update bar fill from timer
         void Rush_UpdateBar()
         {
             bar.SetSliderPos(timer);
         }
 
+        //add score and update +pts message
         void Rush_AddScore()
         {
             int scoreToAdd = Mathf.RoundToInt(CalculateScoreToAdd(timer, PointsToAdd, Rush_MaxTimer));
@@ -330,17 +342,14 @@ namespace Game
             //Rush_UpdateScoreText();
         }
 
-
+        //caculate score based on a math function. Return vals: ptMAx-1
         float CalculateScoreToAdd(float tm,float ptMax,float tmMax) // riferimento alle foto allegates
         {
             tm = tmMax - tm; // correzione tempo decrescente
-           // Debug.Log("Enter with: " + tm + " " + ptMax + " " + tmMax);
-            float res = (ptMax - 1) / (tmMax * tmMax) * (tm * tm); // ax^2
-            //Debug.Log(res.ToString());
-            res -= 2 * ((ptMax - 1) / tmMax) * tm;
-            //Debug.Log(res.ToString());
-            res += ptMax;
-            //Debug.Log(res.ToString());
+            //points = a*(tm^2)+b*(tm)+c 
+            float res = (ptMax - 1) / (tmMax * tmMax) * (tm * tm); // +a*(tm^2)
+            res -= 2 * ((ptMax - 1) / tmMax) * tm; // +b*(tm)
+            res += ptMax; // +c
             return res;
         }
 

@@ -13,7 +13,7 @@ public class AutoQualitySettings : MonoBehaviour {
     float q_timer = 0f;
 
     [SerializeField] bool drawfps = true;
-    string version = "Alpha 0.3";
+    string version = "Alpha 0.4";
 
 
     GUIStyle style = new GUIStyle();
