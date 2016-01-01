@@ -51,4 +51,9 @@ public class ButtonUtilities : MonoBehaviour
         popUp.SetInfo("Are you sure that to go back to Main Menu?", LoadMainMenu);
     }
 
+    public void FeedbBackUrl()
+    {
+        Application.OpenURL("https://docs.google.com/forms/d/1FQur65aY2v6UbyDhjdsgUaCG8wHeEReuqKHezffokao/viewform?usp=send_form");
+    }
+
 }

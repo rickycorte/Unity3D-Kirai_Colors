@@ -42,11 +42,17 @@ namespace Game
 
         EventMaster ev;
 
+        AudioSource audio;
+
+        [SerializeField] AudioClip TimeAttack_Music;
+        [SerializeField] AudioClip Rush_Music;
+
         void OnEnable()
         {
 
             ev = References.evMaster;
-            ev.OnRightButtonClick += NewButtons; //TODO: versione temporanea       
+            ev.OnRightButtonClick += NewButtons; //TODO: versione temporanea   
+            audio = GetComponent<AudioSource>();    
         }
 
         void OnDisable()
@@ -137,6 +143,8 @@ namespace Game
             ev.OnWrongButtonClick += TimeAttack_WrongClick; // sets the action for wrong click
             bar.SetSliderMaxValue(TimeAttack_MaxScore);
             UpdateScoreText("Progress: " + score + "/" + TimeAttack_MaxScore);
+            audio.clip = TimeAttack_Music;
+            audio.Play();
         }
 
         void Rm_TimeAttack()
@@ -155,6 +163,8 @@ namespace Game
             UpdateAction += Rush_UpdateAction;
             ev.OnRightButtonClick += Rush_RightClick;
             ev.OnWrongButtonClick += Rush_WrongClick;
+            audio.clip = Rush_Music;
+            audio.Play();
         }
 
         void Rm_Rush()
@@ -202,7 +212,7 @@ namespace Game
         //set header text
         void SetHeaderText(string BtnToClick)
         {
-            HeaderText.text = "Tap the " + BtnToClick + " button!";
+            HeaderText.text = "Tap the " + BtnToClick + " square!";
         }
 
         //refresh the buttons
