@@ -16,26 +16,18 @@ namespace UI_Scripts
 
             if (openedMenu != null)
             {
-                if (openedMenu.GetComponent<Menu_GrowHeight>())
-                {
-                    openedMenu.GetComponent<Menu_GrowHeight>().CloseMenu();
-                }
+                openedMenu.GetComponent<Menu_GrowHeight>().CloseMenu();
             }
 
-            if (menuToOpen.GetComponent<Menu_GrowHeight>())
-            {
-                menuToOpen.GetComponent<Menu_GrowHeight>().OpenMenu();
-            }
+            menuToOpen.GetComponent<Menu_GrowHeight>().OpenMenu();
 
             openedMenu = menuToOpen;
     }
 
-        public void CloseMenu(GameObject menuToClose)
+        void CloseMenu(GameObject menuToClose)
         {
-            if (menuToClose.GetComponent<Menu_GrowHeight>())
-            {
                 menuToClose.GetComponent<Menu_GrowHeight>().Toggle();
-            }
+            openedMenu = null;
         }
     }
 }

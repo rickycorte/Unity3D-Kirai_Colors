@@ -48,7 +48,7 @@ public class ButtonUtilities : MonoBehaviour
     public void PopUpLoadMainMenu()
     {
         popUp.gameObject.SetActive(true);
-        popUp.SetInfo("Are you sure that to go back to Main Menu?", LoadMainMenu);
+        popUp.SetInfo("Do you want to go back to Main Menu?", LoadMainMenu);
     }
 
     public void FeedbBackUrl()

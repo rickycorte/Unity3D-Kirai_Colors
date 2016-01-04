@@ -9,7 +9,7 @@ namespace UI_Scripts
     [RequireComponent(typeof(CanvasGroup))]
     public class Menu_GrowHeight : MonoBehaviour
     {
-
+        Transform[] myContent;
         LayoutElement LayEl;
         CanvasGroup cvGroup;
         float OpenedHeight = 220f;
@@ -33,19 +33,23 @@ namespace UI_Scripts
 
             cvGroup.interactable = isOpen;
             cvGroup.blocksRaycasts = isOpen;
-               
+
+            myContent = transform.GetComponentsInChildren<Transform>();
+            SetContentActive(isOpen);
         }
 
         public void OpenMenu()
         {
+           
             if(cr != null)
             StopCoroutine(cr);
-
             isOpen = true;
+            SetContentActive(isOpen);
             cvGroup.interactable = true;
             cvGroup.blocksRaycasts = true;
             cr = StartCoroutine(SetMenuHeight(OpenedHeight));
-            Debug.Log("Opening " + gameObject.name);
+
+            //Debug.Log("Opening Menu");
 
         }
 
@@ -58,7 +62,8 @@ namespace UI_Scripts
             cvGroup.interactable = false;
             cvGroup.blocksRaycasts = false;
             cr = StartCoroutine(SetMenuHeight(0));
-            Debug.Log("Closing " + gameObject.name);
+            //Debug.Log("Closing Menu");
+
 
         }
 
@@ -73,10 +78,15 @@ namespace UI_Scripts
                     if ((LayEl.preferredHeight < closeEnouth && !isOpen) ||( LayEl.preferredHeight > TargetHeight - closeEnouth && isOpen ))
                     {
                         LayEl.preferredHeight = TargetHeight;
-                        Debug.Log("Reached prefered height");
+                        if (!isOpen)
+                        {
+                            SetContentActive(isOpen);
+                        }
+                       
+                        //Debug.Log("Reached prefered height");
                         break;
                     }
-                    yield return new WaitForEndOfFrame();
+                    yield return null;
                 }
             }
 
@@ -92,6 +102,14 @@ namespace UI_Scripts
                 CloseMenu();
         }
 
+
+        void SetContentActive(bool open)
+        {
+            for (int i = 0; i < myContent.Length; i++)
+            {
+                myContent[i].gameObject.SetActive(isOpen);
+            }
+        }
 
     }
 }

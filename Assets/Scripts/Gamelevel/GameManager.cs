@@ -197,12 +197,12 @@ namespace Game
                         col_index = Random.Range(0, ColorExtension.colors.Length);
                     } while (col_index == correct_color_index);
 
-                    Debug.Log("Setting color: " + ColorExtension.colors[col_index] + " to button: " + i);
+                    //Debug.Log("Setting color: " + ColorExtension.colors[col_index] + " to button: " + i);
                     GameButtons[i].SetProperties(false, ColorExtension.colors[col_index]);
                 }
                 else
                 {
-                    Debug.Log("Correct button is in pos: " + correct_index + " and it's color is: " + ColorExtension.colors[correct_color_index]);
+                    //Debug.Log("Correct button is in pos: " + correct_index + " and it's color is: " + ColorExtension.colors[correct_color_index]);
                     GameButtons[i].SetProperties(true, ColorExtension.colors[correct_color_index]);
                     SetHeaderText(ColorExtension.colors[correct_color_index]);
                 }
@@ -346,7 +346,7 @@ namespace Game
         void Rush_AddScore()
         {
             int scoreToAdd = Mathf.RoundToInt(CalculateScoreToAdd(timer, PointsToAdd, Rush_MaxTimer));
-            Debug.Log("Score to add: " + CalculateScoreToAdd(timer, PointsToAdd, Rush_MaxTimer));
+            //Debug.Log("Score to add: " + CalculateScoreToAdd(timer, PointsToAdd, Rush_MaxTimer));
             ScoreAdded.text = "+" + scoreToAdd;
             score += scoreToAdd;
             //Rush_UpdateScoreText();

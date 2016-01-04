@@ -478,8 +478,7 @@ Prefab:
     - target: {fileID: 11488500, guid: dde3770228b317341baa44767b971d09, type: 2}
       propertyPath: m_Text
       value: "This is a development build of the game and does not represent the final
-        quality of the product.\n\xA9 2015 RickyIT\nMusic content by Kevin MacLeod
-        (incompetech.com)"
+        quality of the product.\n\xA9 2016 RickyIT"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dde3770228b317341baa44767b971d09, type: 2}
