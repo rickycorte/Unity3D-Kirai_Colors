@@ -227,6 +227,7 @@ namespace Game
         //prevent manager to execute button refresh or update actions
         void StopGame()
         {
+
             isStarted = false;
             GameView.SetActive(false);
 
@@ -289,6 +290,7 @@ namespace Game
         //end the game
         void TimeAttack_EndGame()
         {
+            PlayerLevelManager.AddExp(score); // add score to player experince
             gmOverMenu.gameObject.SetActive(true);
             //gmOverMenu.SetInfo(GameMode, timer);
             gmOverMenu.TimeAttack_InfoPeset(timer);
@@ -317,6 +319,7 @@ namespace Game
         //end rush gamemode game 
         void Rush_EndGame(string motivation)
         {
+            PlayerLevelManager.AddExp(score); // add score to player experince
             gmOverMenu.gameObject.SetActive(true);
             gmOverMenu.Rush_InfoPreset(score, motivation);
             StopGame();

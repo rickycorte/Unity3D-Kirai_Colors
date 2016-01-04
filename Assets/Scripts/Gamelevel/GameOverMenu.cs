@@ -9,7 +9,7 @@ namespace Game
         [SerializeField] Text HeaderText;
         [SerializeField] Text ScoreHeaderText;
         [SerializeField] Text ScoreText;
-
+        [SerializeField] ExpericePanel expPanel;
 
         //public void SetInfo(GameManager.GameModes gameMode, float score)
         //{
@@ -39,6 +39,7 @@ namespace Game
             System.TimeSpan time = System.TimeSpan.FromSeconds(score); // used to print a readable time expression
             string timestring = string.Format("{0:D}:{1:D2}:{2:D1}", time.Minutes, time.Seconds, Mathf.RoundToInt(time.Milliseconds / 100f));
             ScoreText.text = timestring;
+            expPanel.UpdateExpPanel();
         }
 
         public void Rush_InfoPreset(float score, string EndGameCause)
@@ -46,6 +47,7 @@ namespace Game
             HeaderText.text = "Rush: "+EndGameCause;
             ScoreHeaderText.text = "Your Score: ";
             ScoreText.text = score.ToString();
+            expPanel.UpdateExpPanel();
         }
 
 
