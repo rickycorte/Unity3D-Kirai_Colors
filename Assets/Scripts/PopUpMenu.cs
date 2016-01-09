@@ -57,6 +57,13 @@ public class PopUpMenu : MonoBehaviour {
     void Close()
     {
         //Time.timeScale = 1;
+        NegativeButton.gameObject.SetActive(true);
         gameObject.SetActive(false);
+    }
+
+    public void CustomMessage(string message)
+    {
+        NegativeButton.gameObject.SetActive(false);
+        HeaderText.text = message;
     }
 }

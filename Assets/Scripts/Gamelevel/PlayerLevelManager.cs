@@ -64,7 +64,7 @@ public class PlayerLevelManager : MonoBehaviour {
 
     static void CalculateExpForNextLevel()
     {
-        ExpToNextLevel = 100 * CurrentLevel + 100;
+        ExpToNextLevel = 30 * CurrentLevel + 20;
         //Debug.Log(expToNextLevel);
     }
 
@@ -115,6 +115,6 @@ public class PlayerLevelManager : MonoBehaviour {
 
     public static int CalculateExpForLevel(int level)
     {
-        return 100 * level + 100;
+        return 30 * level + 20;
     }
 }

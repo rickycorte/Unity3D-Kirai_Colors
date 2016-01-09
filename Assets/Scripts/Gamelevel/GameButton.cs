@@ -29,7 +29,7 @@ namespace Game
 
 
         // Use this for initialization
-        void Start()
+        void OnEnable()
         {
             Init();
         }

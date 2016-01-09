@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 namespace Game
 {
@@ -16,6 +17,25 @@ namespace Game
             evMaster = ev;
         }
 
+        [Header("Score references")]
+        public Text HeaderText; // text displayed on top 
+        public Text ScoreText;
+        public Text ScoreAdded;
+
+        [Header("Buttons references")]
+        public List<GameButton> GameButtons; // list of 9 buttons references
+
+        [Header("TimeBar references")]
+        public CustomSlider bar;
+
+        [Header("Menus references")]
+        public GameOverMenu gmOverMenu;
+
+        public GameObject GameView;
+
+        [Header("Music references")]
+        public AudioClip TimeAttack_Music;
+        public AudioClip Rush_Music;
 
     }
 }

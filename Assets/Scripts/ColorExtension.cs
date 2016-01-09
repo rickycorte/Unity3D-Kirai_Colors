@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 //class that contains only a list of static colors to use
-public class ColorExtension : MonoBehaviour {
+public static class ColorExtension{
 
     public static ExtendedColor red = new ExtendedColor("Red", Color.red);
 
