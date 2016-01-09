@@ -98,6 +98,7 @@ GameObject:
   - 222: {fileID: 22253788}
   - 114: {fileID: 11436680}
   - 114: {fileID: 11457760}
+  - 114: {fileID: 11410922}
   m_Layer: 0
   m_Name: EndButton
   m_TagString: Untagged
@@ -240,7 +241,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Short
+  m_Text: Normal
 --- !u!114 &11402346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,6 +311,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11410922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0257f693cc155284b8b8bf3291b75d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ErrorMessage: {fileID: 0}
+  UnlockLevel: 5
+  ButtonIcon: {fileID: 11408340}
+  LockedIcon: {fileID: 21300000, guid: 283753054555174478eb913d054d28ed, type: 3}
 --- !u!114 &11411084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,7 +358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Normal
+  m_Text: Crazy
 --- !u!114 &11411504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -402,7 +418,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Long
+  m_Text: Insane
 --- !u!114 &11432004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -502,7 +518,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -565,7 +581,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 1
           m_BoolArgument: 0
@@ -628,7 +644,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -723,7 +739,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Rush Gamemode
 --- !u!114 &11480248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -865,8 +881,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -171, y: 0}
-  m_SizeDelta: {x: -342, y: 0}
+  m_AnchoredPosition: {x: -170, y: 0}
+  m_SizeDelta: {x: -340, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22416738
 RectTransform:
@@ -971,8 +987,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 171, y: 0}
-  m_SizeDelta: {x: -342, y: 0}
+  m_AnchoredPosition: {x: 170, y: 0}
+  m_SizeDelta: {x: -340, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22471486
 RectTransform:
@@ -1028,7 +1044,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -342, y: 0}
+  m_SizeDelta: {x: -340, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &22519238
 CanvasGroup:
