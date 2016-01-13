@@ -56,4 +56,20 @@ public class ButtonUtilities : MonoBehaviour
         Application.OpenURL("https://docs.google.com/forms/d/1FQur65aY2v6UbyDhjdsgUaCG8wHeEReuqKHezffokao/viewform?usp=send_form");
     }
 
+    public void RateApp()
+    {
+        //RateHandler.CallEventRateUs();
+#if UNITY_WINRT_8_1
+        Application.OpenURL("ms-windows-store:reviewapp?appid=46c470e1-a126-4138-bf14-1bbcd020eada");
+#endif
+#if UNITY_ANDROID
+        Application.OpenURL("market://details?id=com.RickyIT.Tap_That");
+#endif
+    }
+
+    public void Donate()
+    {
+        Application.OpenURL("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6ZN83HH24U5RU");
+    }
+
 }

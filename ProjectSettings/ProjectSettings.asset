@@ -10,7 +10,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: RickyIT
-  productName: Tap That
+  productName: Kirai Colors
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
@@ -90,14 +90,14 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.RickyIT.Tap_That
-  bundleVersion: 0.5
+  bundleVersion: 0.7
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: 84a0a59678a6870498f5ed94383b2645
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -159,7 +159,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: D:/Develop/Unity Projects/user.keystore
-  AndroidKeyaliasName: rickyit
+  AndroidKeyaliasName: 
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
@@ -173,7 +173,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 23919b599e60af145b3c150f11dccf2f, type: 3}
+      m_Icon: {fileID: 2800000, guid: 91409b5bff648d6479400775e421ba83, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []
@@ -340,7 +340,7 @@ PlayerSettings:
   metroCertificateNotAfter: 80de21b6ba58d201
   metroApplicationDescription: Tap That
   wsaImages: {}
-  metroTileShortName: Tap That
+  metroTileShortName: Kirai Colors
   metroCommandLineArgsFile: 
   metroTileShowName: 0
   metroMediumTileShowName: 0
