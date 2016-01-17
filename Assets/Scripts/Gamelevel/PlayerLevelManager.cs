@@ -34,6 +34,10 @@ public class PlayerLevelManager : MonoBehaviour {
     static string Save_currentxp = "CurrentExp";
 
     static int maxLevel = 100;
+    public static int MaxLevel
+    {
+        get { return maxLevel; }
+    }
 
 
   
@@ -78,32 +82,32 @@ public class PlayerLevelManager : MonoBehaviour {
     public static void AddExp(int expToAdd)
     {
         OldExp = CurrentExp;
-
-        if (CurrentLevel + 1 <= maxLevel)
+        int temp = CurrentExp + expToAdd;
+        Debug.Log(temp + " of " + ExpToNextLevel);
+        if (temp >= ExpToNextLevel)
         {
-            int temp = CurrentExp + expToAdd;
-            Debug.Log(temp + " of " + ExpToNextLevel);
-            if (temp >= ExpToNextLevel)
+            while (true)
             {
-                while (true)
+                if (currentLevel + 1 > maxLevel)
                 {
-                    CurrentLevel++;
-                    CurrentExp = temp - ExpToNextLevel;
-                    isRankUp = true;
-                    Debug.Log("Rank Up! Current exp:" + currentExp);
-                    CalculateExpForNextLevel();
-                    if (expToAdd < expToNextLevel)
-                        break;
+                    break;
                 }
+                CurrentLevel++;
+                CurrentExp = temp - ExpToNextLevel;
+                isRankUp = true;
+                Debug.Log("Rank Up! Current exp:" + currentExp);
+                CalculateExpForNextLevel();
+                if (expToAdd < expToNextLevel)
+                    break;
             }
-            else
-            {
-                CurrentExp = temp;
-                isRankUp = false;
-                Debug.Log("Current exp:" + currentExp);
-            }
-            SaveData();
         }
+        else
+        {
+            CurrentExp = temp;
+            isRankUp = false;
+            Debug.Log("Current exp:" + currentExp);
+        }
+        SaveData();
     }
 
     //save all data to disk
