@@ -12,7 +12,7 @@ namespace UI_Scripts
         Transform[] myContent;
         LayoutElement LayEl;
         CanvasGroup cvGroup;
-        float OpenedHeight = 220f;
+        [SerializeField] float OpenedHeight = 220f;
         float closeEnouth = 1f;
         float Lerp = 7f;
 
