@@ -80,9 +80,9 @@ namespace Game
         }
 
         //set header text
-        void SetHeaderText(string BtnToClick)
+        void SetHeaderText(ExtendedColor col)
         {
-            _ref.HeaderText.text = "Tap the " + BtnToClick + " square!";
+            _ref.HeaderText.text = "Tap the <b><color=#"+col.color.ToHex()+"ff>" + col.name + "</color></b> quare!";
         }
 
         //refresh the buttons
