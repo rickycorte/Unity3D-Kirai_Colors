@@ -269,8 +269,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -329}
-  m_SizeDelta: {x: 1, y: -659}
+  m_AnchoredPosition: {x: 0, y: -340}
+  m_SizeDelta: {x: 1, y: -682}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126800721
 MonoBehaviour:
@@ -1704,7 +1704,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1071689926}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 900a1af6d97ac0946ae906bc4cfa9287, type: 3}
   m_Name: 
@@ -2611,8 +2611,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 256, y: -125}
-  m_SizeDelta: {x: 512, y: 250}
+  m_AnchoredPosition: {x: 256, y: -113.5}
+  m_SizeDelta: {x: 512, y: 227}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400298602
 MonoBehaviour:
@@ -2782,7 +2782,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22420828, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -125
+      value: -113.5
       objectReference: {fileID: 0}
     - target: {fileID: 22420828, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_SizeDelta.x
@@ -2790,7 +2790,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22420828, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 250
+      value: 227
       objectReference: {fileID: 0}
     - target: {fileID: 22420828, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_AnchorMin.x
@@ -3859,7 +3859,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22420828, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -125
+      value: -113.5
       objectReference: {fileID: 0}
     - target: {fileID: 22420828, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_SizeDelta.x
@@ -3867,7 +3867,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22420828, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 250
+      value: 227
       objectReference: {fileID: 0}
     - target: {fileID: 22420828, guid: a6314a2ca85a8924fba713f260fc9133, type: 2}
       propertyPath: m_AnchorMin.x

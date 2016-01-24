@@ -90,14 +90,14 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.RickyIT.Tap_That
-  bundleVersion: 0.7
+  bundleVersion: 1
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: 84a0a59678a6870498f5ed94383b2645
-  AndroidBundleVersionCode: 2
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -159,7 +159,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: D:/Develop/Unity Projects/user.keystore
-  AndroidKeyaliasName: 
+  AndroidKeyaliasName: rickyit
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
