@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+/*
+  Unity3D Kirai Colors
+
+  Copyright (c) 2015-2016 RickyCoDev
+  Licensed under Mit Licence
+*/
+using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
@@ -18,7 +24,7 @@ namespace Game
         }
 
         [Header("Score references")]
-        public Text HeaderText; // text displayed on top 
+        public Text HeaderText; // text displayed on top
         public Text ScoreText;
         public Text ScoreAdded;
 

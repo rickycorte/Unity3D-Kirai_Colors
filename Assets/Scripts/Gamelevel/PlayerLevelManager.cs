@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+/*
+  Unity3D Kirai Colors
+
+  Copyright (c) 2015-2016 RickyCoDev
+  Licensed under Mit Licence
+*/
+using UnityEngine;
 using System.Collections;
 
 public class PlayerLevelManager : MonoBehaviour {
@@ -40,7 +46,7 @@ public class PlayerLevelManager : MonoBehaviour {
     }
 
 
-  
+
 
     static void GetSaveData()
     {

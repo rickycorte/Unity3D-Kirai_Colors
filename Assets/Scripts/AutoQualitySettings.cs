@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+/*
+  Unity3D Kirai Colors
+
+  Copyright (c) 2015-2016 RickyCoDev
+  Licensed under Mit Licence
+*/
+using UnityEngine;
 using System.Collections;
 
 public class AutoQualitySettings : MonoBehaviour {
@@ -25,7 +31,7 @@ public class AutoQualitySettings : MonoBehaviour {
         WarningStyle.fontSize = 16;
         WarningStyle.normal.textColor = Color.yellow;
     }
-	
+
 	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;

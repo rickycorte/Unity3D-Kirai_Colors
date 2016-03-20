@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+/*
+  Unity3D Kirai Colors
+
+  Copyright (c) 2015-2016 RickyCoDev
+  Licensed under Mit Licence
+*/
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -40,7 +46,7 @@ namespace UI_Scripts
 
         public void OpenMenu()
         {
-           
+
             if(cr != null)
             StopCoroutine(cr);
             isOpen = true;
@@ -82,7 +88,7 @@ namespace UI_Scripts
                         {
                             SetContentActive(isOpen);
                         }
-                       
+
                         //Debug.Log("Reached prefered height");
                         break;
                     }

@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+/*
+  Unity3D Kirai Colors
+
+  Copyright (c) 2015-2016 RickyCoDev
+  Licensed under Mit Licence
+*/
+using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
@@ -24,7 +30,7 @@ namespace Game
 
         int Rush_MaxTimer = 5;
 
-        [SerializeField] Text HeaderText; // text displayed on top 
+        [SerializeField] Text HeaderText; // text displayed on top
         [SerializeField] Text ScoreText;
         [SerializeField] Text ScoreAdded;
 
@@ -36,7 +42,7 @@ namespace Game
 
         [SerializeField] GameObject GameView;
 
-        delegate void BaseAction(); 
+        delegate void BaseAction();
 
         BaseAction UpdateAction;//function to rely with different timer uses
 
@@ -51,8 +57,8 @@ namespace Game
         {
 
             ev = References.evMaster;
-            ev.OnRightButtonClick += NewButtons; //TODO: versione temporanea   
-            audio = GetComponent<AudioSource>();    
+            ev.OnRightButtonClick += NewButtons; //TODO: versione temporanea
+            audio = GetComponent<AudioSource>();
         }
 
         void OnDisable()
@@ -185,7 +191,7 @@ namespace Game
 
         }
 
-        //set color of all buttons and correct one 
+        //set color of all buttons and correct one
         void SetUpButtonsColor(int correct_index, int correct_color_index)
         {
             for (int i = 0; i < GameButtons.Count; i++)
@@ -237,13 +243,13 @@ namespace Game
 
         public void TimeAttack_addScore()
         {
-            //TODO:calcolare punteggio in base a tempo       
+            //TODO:calcolare punteggio in base a tempo
             ScoreAdded.text = "+" + PointsToAdd;
             score += PointsToAdd;
 
         }
 
-        //update score text 
+        //update score text
         void UpdateScoreText(string text)
         {
             ScoreText.text = text;
@@ -316,7 +322,7 @@ namespace Game
             Rush_EndGame("Wrong Color");
         }
 
-        //end rush gamemode game 
+        //end rush gamemode game
         void Rush_EndGame(string motivation)
         {
             PlayerLevelManager.AddExp(score); // add score to player experince
@@ -359,7 +365,7 @@ namespace Game
         float CalculateScoreToAdd(float tm,float ptMax,float tmMax) // riferimento alle foto allegates
         {
             tm = tmMax - tm; // correzione tempo decrescente
-            //points = a*(tm^2)+b*(tm)+c 
+            //points = a*(tm^2)+b*(tm)+c
             float res = (ptMax - 1) / (tmMax * tmMax) * (tm * tm); // +a*(tm^2)
             res -= 2 * ((ptMax - 1) / tmMax) * tm; // +b*(tm)
             res += ptMax; // +c

@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+/*
+  Unity3D Kirai Colors
+
+  Copyright (c) 2015-2016 RickyCoDev
+  Licensed under Mit Licence
+*/
+
+using UnityEngine;
 using System.Collections;
 
 namespace Game
@@ -22,7 +29,7 @@ namespace Game
         protected AudioSource music;
 
         protected virtual void OnEnable()
-        {          
+        {
             ev = References.evMaster;
             _ref = GetComponent<References>();
             music = GetComponent<AudioSource>();
@@ -30,7 +37,7 @@ namespace Game
 
         protected virtual void OnDisable()
         {
-            ev.OnRightButtonClick -= NewButtons;          
+            ev.OnRightButtonClick -= NewButtons;
         }
 
         protected virtual void Init()
