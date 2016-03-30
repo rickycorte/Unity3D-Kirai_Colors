@@ -21,6 +21,6 @@ The game is build with unity 5.3.x and can be found on both Play Store and Windo
 # Licence
 Copyright (c) 2016 RickyCoDev
 
-Licensed under Mit License (I will add this notice to source files later)
+Licensed under Mit License
 
 **Note:** I do not own some art/music contents. To this elements the licence may be different from the licence applied to my source files!
